@@ -3,19 +3,33 @@
 }
 
 <div class="container-fluid">
-    <div class="flex-column flex-xxl-row d-flex align-items-center justify-content-around">
-        <div class="col-6">
+    <div class="flex-column flex-xl-row d-flex align-items-center justify-content-center">
+
+        <div class="col-4">
             <img src="../images/CallieLogo.png" />
         </div>
+
+        <div class="spacer">
+            <br/>
+            <br/>
         </div>
-        <div class="col-6">
-            <p class="h2">What We Do</p>
-            <p class="text-wrap w-75">Here at CALLIE, we are dedicated to helping companies respond to, prioritize, and redirect customer requests - simply and all in one system.</p>
-            <button class="btn btn-outline-light">Contact Us</button>
-            <br />
-            <br />
-            <button class="btn btn-outline-light">Sign Up</button>
-            <button class="btn btn-outline-light">Log In</button>
+
+        <div class="col-4 align-items-center justify-content-center">
+            <p class="h4 text-center text-xl-start">What We Do</p>
+            <br/>
+            <p class="text-wrap text-center text-xl-start m-75">Here at CALLIE, we are dedicated to helping companies respond to, prioritize, and redirect customer requests - simply and all in one system.</p>
+
+            <div class="spacer">
+                <br />
+                <br />
+            </div>
+
+            <div class="flex-row d-flex">
+                <button class="btn btn-outline-light me-5">Contact Us</button>
+                <a class="btn btn-outline-light me-3" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
+                <a class="btn btn-outline-light mw-3" asp-area="Identity" asp-page="/Account/Login">Log In</a>
+            </div>
         </div>
+
     </div>
 </div>

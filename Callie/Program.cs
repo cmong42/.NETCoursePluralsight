@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using System.Text.Json.Serialization;
 using Callie.Areas.Identity.Data;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.General;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("CallieContextConnection") ?? throw new InvalidOperationException("Connection string 'CallieContextConnection' not found.");
@@ -32,7 +33,6 @@ app.UseAuthentication();
 app.UseStaticFiles();
 app.UseSession();
 
-
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -51,5 +51,7 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.MapRazorPages();
 
 app.Run();

@@ -1,5 +1,8 @@
 using Callie.Areas.Identity.Data;
+using Callie.Areas.Identity.Pages.Account;
 using Callie.Models;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -14,6 +17,7 @@ namespace Callie.Controllers
         {
             _callieDbContext = callieDbContext;
             _logger = logger;
+ 
         }
 
         public IActionResult Index()
@@ -21,9 +25,10 @@ namespace Callie.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Login()
         {
-            return View();
+            return RedirectToPage("/Account/Login", new { area = "Identity" });
+
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -31,5 +36,6 @@ namespace Callie.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

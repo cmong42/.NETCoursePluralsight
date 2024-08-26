@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Callie.Areas.Identity.Data
 {
-    public class CallieDbContext : DbContext
+    public class CallieDbContext : IdentityDbContext<IdentityUser>
     {
         public CallieDbContext(DbContextOptions<CallieDbContext> options) : base(options)
         {
