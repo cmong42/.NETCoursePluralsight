@@ -1,0 +1,27 @@
+﻿
+.main{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 20%;
+}
+
+.content {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    font-weight: 200;
+}
+
+button {
+    border: solid 0.5px white;
+    padding: 0.5em;
+    color: rgb(84, 84, 84);
+}
